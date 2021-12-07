@@ -1,3 +1,4 @@
+
 pipeline{
 agent any
 stages {
@@ -15,7 +16,11 @@ stage('Build'){
 steps{
 bat 'npm run-script build'
 }
-}stage('Deploy')
+}
+
+
+
+stage('Deploy')
 {
 steps{
 bat 'ng serve -o'
