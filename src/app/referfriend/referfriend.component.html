@@ -1,0 +1,29 @@
+
+<div class="image">
+<div  class="form-row-refer">
+
+          <div class="col">
+              <form [formGroup]="referform">
+            <label>Enter your friends mail: </label>
+            <input
+              type="text"
+              placeholder="Email"
+              name="friendemail"
+              formControlName="email"
+         
+            />
+            </form>
+          </div>
+        </div>
+        <div class="registerbutton" align="center">
+          <Button
+            color="secondary"
+            variant="contained"
+            type="button"
+            (click)="refer()"
+          >
+            Refer Friend
+          </Button>
+</div>
+        </div>
+    

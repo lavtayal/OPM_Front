@@ -1,0 +1,52 @@
+<div class="input-group" style="width: 50%; margin-left: 130px;">
+    <input type="search" class="form-control rounded" [value]="searchBy" (keyup)="setString($event)" placeholder="Search" aria-label="Search"
+    aria-describedby="search-addon" />
+    <button type="button" class="btn btn-outline-primary" (click)="getCompanies()">search</button>
+  </div>
+<div className="projects">
+    <div className="container">
+      <div className="row">
+        <div className="col-md-12">
+          <h1 className="display-4 text-center">Companies</h1>
+          <!-- <hr /> -->
+          <table class="table table-dark table-bordered">
+            <thead>
+              <tr>
+                <th class="text-center">S.No</th>
+                <th class="text-Left">Company Name</th>
+                <th class="text-center">Company Code</th>
+                <th class="text-center">Location</th>
+                <th class="text-center">Vacancies</th>
+                <th class="text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngIf="companies.length <= 0">
+                    No Company Found
+                    </tr>
+
+              <tr *ngFor="let company of companies">
+                  
+                <th class="text-center">{{company.id}}</th>
+                <td class="text-Left">{{company.companyName}}</td>
+                <td class="text-center">{{company.companyCode}}</td>
+                <td class="text-center">{{company.companyLocation}}</td>
+                <td class="text-center">{{company.vacancies}}</td>
+                <td class="text-center">
+                  <button
+                    type="button"
+                    class="btn btn-primary rounded-pill btn-sm"
+                    (click)="sendEnquiry(company.companyCode)"
+                  >
+                    Send Enquiry
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  

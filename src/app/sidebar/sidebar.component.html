@@ -1,0 +1,49 @@
+<div  class="wrapper">
+    <!-- Sidebar  -->
+    <nav  id="sidebar">
+        <!-- <div class="sidebar-header">
+            <h3>Bootstrap Sidebar</h3>
+        </div> -->
+
+        <ul class="list-unstyled components">
+            <p style="color: #000;">Information Center</p>
+            
+            <li *ngIf="loggedin && type == 'user'">
+                <a routerLink="persondetail" >Update Details</a>
+            </li>
+            <li *ngIf="loggedin && type == 'user'">
+                <a routerLink="uploaddocument" >Upload Document</a>
+            </li>
+            <li *ngIf="loggedin && type == 'user'">
+                <a routerLink="/allcompany">Get All Companies</a>
+            </li>
+            
+            <li *ngIf="loggedin && type == 'user'">
+                <a routerLink="search">Search By Location</a>
+            </li>
+            <li *ngIf="loggedin && type == 'user'">
+                <a routerLink="refer">Refer To a Friend</a>
+            </li>
+            <li *ngIf="loggedin && type == 'user'">
+                <a routerLink="checkstatus">Check Status</a>
+            </li>
+            
+
+            <li *ngIf="loggedin && type == 'company'">
+                <a routerLink="delievery">All Delieveries</a>
+            </li>
+
+            <li *ngIf="loggedin && type == 'company'">
+                <a routerLink="enquiry">All Enquiries</a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <router-outlet></router-outlet>
+
+       
+</div>

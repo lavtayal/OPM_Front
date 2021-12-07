@@ -1,0 +1,32 @@
+<div className="UploadDocument">
+    <h3>
+      Kindly Upload Supporting Document
+    </h3>
+    <span>
+        Note : Resume Shoulud not be more than 2 mb
+        </span>
+  </div>
+  <div class="container my-auto">
+    <div class="row box">
+      <div class="col-attach col-lg-6">
+        <input
+          type="file"
+          (change)="selectFile($event)"
+        
+        />
+      </div>
+      <div className="col col-lg-6">
+        <div className="button-upload">
+          <Button
+            type="submit"
+            variant="contained"
+            color="default"
+            (click)="upload()"
+            
+          >
+            Upload
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>

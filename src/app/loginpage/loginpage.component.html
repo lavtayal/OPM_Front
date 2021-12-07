@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row row-login1 no-gutters">
+      <div class="col-lg-5">
+        <img src="../../assets/hero3.jpg" class="img-fluid" alt="">
+      </div>
+      <div class=" col-lg-7 px-5 pt-5">
+        <h1 class="thistext-right font-weight-bold py-3">
+          Online Passport
+        </h1>
+        <h4>Sign In to your Account</h4>
+        <form [formGroup]="loginForm">
+          <div class="form-row">
+            <div class="form-group">
+              <input
+                type="email"
+                formControlName="userName"
+                placeholder="Email-Address"
+                class="form-control my-3 p-4"
+              >
+              <span class="text-danger"
+              *ngIf="!loginForm.controls.userName.valid && loginForm.controls.userName.touched"
+            >
+            Name is required
+        </span>
+            </div>
+          
+            
+          </div>
+          <div class="form-row">
+            <div class="form-group ">
+              <input
+                type="password"
+                formControlName="password"
+                placeholder="******"
+                class="form-control my-3 p-4"
+              >
+              <span class="text-danger"
+              *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.touched"
+            >
+            Password is required
+        </span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-6">
+              <button  type="button" class="btn1 mt-3 mb-5" (click)="submitLogin()">
+                Login
+              </button>
+            </div>
+          </div>
+          <a href="#">Forgot password</a>
+          <p>
+            Don't have an account? <button><a  (click)="goToRoute()">SignUp here</a></button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>

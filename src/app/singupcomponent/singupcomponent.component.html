@@ -1,0 +1,61 @@
+<!-- <section> -->
+<div class="container">
+    <div class="row row-login1 no-gutters">
+      <div class="col-lg-5">
+        <img src="../../assets/hero3.jpg" class="img-fluid" alt="">
+      </div>
+      <div class=" col-lg-7 px-5 pt-5">
+        <h1 class="thistext-right font-weight-bold py-3">
+          Online Passport
+        </h1>
+        <h4>Sign Up for new Account</h4>
+        <form [formGroup]="signupform">
+          <div class="form-row">
+            <div class="col-email col-lg-7">
+              <input
+                type="username"
+                formControlName="userName"
+                placeholder="UserName"
+                class="form-control my-3 p-4"
+              >
+              <p *ngIf="!signupform.controls.userName.valid && signupform.controls.userName.touched" class="text-danger" style="font-size: medium;">Username is Required</p>  
+            </div>
+            
+            </div>
+            <div class="form-row">
+              <div class="col-email col-lg-7">
+                <input
+                  type="email"
+                  formControlName="email"
+                  placeholder="Email-Address"
+                  class="form-control my-3 p-4"
+                >
+                <p *ngIf="signupform.controls.email.errors?.required && signupform.controls.email.touched" class="text-danger" style="font-size: medium;">Email is Required</p>
+                <p *ngIf="signupform.controls.email.errors?.email " class="text-danger" style="font-size: medium;">Please Enter Valid Email</p>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-lg-7 ">
+                <input
+                  type="password"
+                  formControlName="password"
+                  placeholder="******"
+                  class="form-control my-3 p-4"
+                >
+                <span *ngIf="!signupform.controls.password.valid && signupform.controls.password.touched" class="text-danger" style="font-size: medium;">Password is Required</span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-lg-7">
+                <button type="button" class="btn1 mt-3 mb-5" (click)="signUp()">
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          <!-- </div> -->
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- </section> -->

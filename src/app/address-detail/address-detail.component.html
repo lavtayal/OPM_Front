@@ -1,0 +1,79 @@
+<div className="page-wrapper p-t-100 p-b-100 font-robo">
+    <div className="wrapper wrapper--w680">
+      <div className="card card-1">
+        <div className="card-heading"></div>
+        <div className="card-body">
+          <h2 className="title">Address</h2>
+          <form [formGroup]="addressform">
+            <div class="form-group">
+                <label for="plotno">Plot No</label>
+                <input type="text" class="form-control" id="Plot No"
+                formControlName="plotNo"
+                   placeholder="Enter Plot No">
+                <small *ngIf="!addressform.controls.plotNo.valid && addressform.controls.plotNo.touched" id="eventname" class="text-danger">Plot No is Required</small>
+              </div>
+
+              <div class="form-group">
+                <label for="street">Street</label>
+                <input type="text" class="form-control" id="street"
+                formControlName="street"
+                   placeholder="Enter Street">
+                   <small id="eventname" *ngIf="!addressform.controls.street.valid && addressform.controls.street.touched" class="text-danger">Street is Required</small>
+                <!-- <small id="eventname" class="form-text text-muted">Enter First Name</small> -->
+              </div>
+
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city"
+                formControlName="city"
+                   placeholder="Enter City">
+                   <small *ngIf="!addressform.controls.city.valid && addressform.controls.city.touched" id="eventname" class="text-danger">City is Required</small>
+                <!-- <small id="eventname" class="form-text text-muted">Enter First Name</small> -->
+              </div>
+
+              
+              <div class="form-group">
+                <label for="district">District</label>
+                <input type="text" class="form-control" id="district"
+                formControlName="districts"
+                   placeholder="Enter District">
+                   <small *ngIf="!addressform.controls.districts.valid && addressform.controls.districts.touched" id="eventname" class="text-danger">District is Required</small>
+                <!-- <small id="eventname" class="form-text text-muted">Enter First Name</small> -->
+              </div>
+
+              <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" class="form-control" id="state"
+                formControlName="state"
+                   placeholder="Enter State">
+                   <small *ngIf="!addressform.controls.state.valid && addressform.controls.state.touched" id="eventname" class="text-danger">State is Required</small>
+                <!-- <small id="eventname" class="form-text text-muted">Enter First Name</small> -->
+              </div>
+
+              
+              <div class="form-group">
+                <label for="zipcode">Zip Code</label>
+                <input type="number" class="form-control" id="zipcode"
+                formControlName="zipcode"
+                   placeholder="Enter Zip Code">
+                   <small *ngIf="!addressform.controls.zipcode.valid && addressform.controls.zipcode.touched" id="eventname" class="text-danger">Zipcode is Required</small>
+                <!-- <small id="eventname" class="form-text text-muted">Enter First Name</small> -->
+              </div>
+
+           
+            <Button color="default" variant="contained">
+              Back
+            </Button>
+            <Button
+              color="primary"
+              variant="contained"
+              type="submit"
+              (click)="submitadressform()"
+            >
+              Submit
+            </Button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

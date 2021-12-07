@@ -1,0 +1,47 @@
+<div className="page-wrapper p-t-100 p-b-100 font-robo">
+    <div className="wrapper wrapper--w680">
+        <div className="card card-1">
+            <div className="card-heading"></div>
+            <div className="card-body">
+                <h2 className="title">Educational Details</h2>
+                <form [formGroup]="educationform">
+                <!-- <div class="input-group">
+                        <input class="input--style-1" type="text" placeholder="UG" name="qualification1" >
+                    </div> -->
+                    <div class="form-group">
+                        <label for="UG">UG</label>
+                        <input type="text" class="form-control" id="UG"
+                        formControlName="qualification1"
+                          aria-describedby="emailHelp" placeholder="Enter UG details">
+                        <small *ngIf="!educationform.controls.qualification1.valid && educationform.controls.qualification1.touched" id="eventname" class="text-danger">UG is required</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="high school">High School</label>
+                        <input type="text" class="form-control" id="high school"
+                        formControlName="qualification2"
+                          aria-describedby="emailHelp" placeholder="Enter High School">
+                          <small *ngIf="!educationform.controls.qualification2.valid && educationform.controls.qualification2.touched" id="eventname" class="text-danger">High School is required</small>
+                        <!-- <small id="eventname" class="form-text text-muted">Enter First Name</small> -->
+                      </div>
+
+                      <div class="form-group">
+                        <label for="secondary school">Secondary School</label>
+                        <input type="text" class="form-control" id="secondary school"
+                        formControlName="qualification3"
+                          aria-describedby="emailHelp" placeholder="Enter Secondary School">
+                          <small *ngIf="!educationform.controls.qualification3.valid && educationform.controls.qualification3.touched" id="eventname" class="text-danger">Secondary School is required</small>
+                        <!-- <small id="eventname" class="form-text text-muted">Enter First Name</small> -->
+                      </div>
+                    <!-- <div class="input-group">
+                        <input class="input--style-1" type="text" placeholder="HIGH SCHOOL" name="qualification2">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-1" type="text" placeholder="SECONDARY SCHOOL">
+                    </div> -->
+                    <Button color="default" variant="contained" >Back</Button>
+                    <Button color="primary" variant="contained" (click)="submiteducationdetail()">Continue</Button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

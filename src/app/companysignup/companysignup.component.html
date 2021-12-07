@@ -1,0 +1,122 @@
+<div class="container-company">
+    <div class="myCard-company">
+      <div class="row ">
+        <div class="col-md-5 ">
+          <div class="myLeftCtn-company">
+            <form [formGroup]="companyform"
+              class="myForm-company text-center">
+              <h4>Create company account</h4>
+              <br />
+              <div className="text-center">
+                <h3>
+                  <!-- <p class="text-danger">{errors.response}</p> -->
+                  <br />
+                </h3>
+              </div>
+              <div class="form-group my-2 ">
+                <input
+                  class="myInput"
+                  type="text"
+                  placeholder="Company Code"
+                  id="companyCode"
+                  name="companyCode"
+                  formControlName="companyCode"
+                />
+            <p *ngIf="!companyform.controls.companyCode.valid && companyform.controls.companyCode.touched" class="text-danger">Company Code is Required</p>
+              </div>
+
+              <div class="form-group">
+                <input
+                  class="myInput"
+                  placeholder="Company Name"
+                  formControlName="companyName"
+                  type="text"
+                  id="companyName"
+                  name="companyName"
+                
+                />
+                <p *ngIf="!companyform.controls.companyName.valid && companyform.controls.companyName.touched" class="text-danger">Company Name is Required</p>
+              </div>
+              <div class="form-group my-2">
+                <input
+                  class="myInput"
+                  placeholder="Company Email"
+                  type="email"
+                  formControlName="companyEmail"
+                  id="companyEmail"
+                  name="companyEmail"
+                />
+                <p *ngIf="!companyform.controls.companyEmail.valid && companyform.controls.companyEmail.touched" class="text-danger">Company Email is Required</p>
+              </div>
+              <div class="form-group my-2">
+                <input
+                  class="myInput"
+                  placeholder="Company Qualification"
+                  type="text"
+                  formControlName="minQualifiaction"
+                  id="minQualifiaction"
+                  name="minQualifiaction"
+                />
+                <p *ngIf="!companyform.controls.minQualifiaction.valid && companyform.controls.minQualifiaction.touched" class="text-danger">Company Qualification is Required</p>
+              </div>
+              <div class="form-group my-2">
+                <input
+                  class="myInput"
+                  placeholder="Passport Title"
+                  type="text"
+                  formControlName="passportTitle"
+                  id="passportTitle"
+                  name="passportTitle"
+                  
+                />
+                <p *ngIf="!companyform.controls.passportTitle.valid && companyform.controls.passportTitle.touched" class="text-danger">Passport Title is Required</p>
+              </div>
+              <div class="form-group my-2">
+                <input
+                  class="myInput"
+                  placeholder="Company Location"
+                  type="text"
+                  id="location"
+                  name="companyLocation"
+                  formControlName="companyLocation"
+                />
+                <p *ngIf="!companyform.controls.companyLocation.valid && companyform.controls.companyLocation.touched" class="text-danger">Company Location is Required</p>
+              </div>
+              <div class="form-group mb-5">
+                <input
+                  class="myInput"
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                  formControlName="password"
+                />
+                <p *ngIf="!companyform.controls.password.valid && companyform.controls.password.touched" class="text-danger">Password is Required</p>
+              </div>
+
+              <button
+                type="submit"
+                class="butt"
+                (click)="submitForm()"
+                value="CREATE ACCOUNT"
+              >CREATE ACCOUNT</button>
+            </form>
+          </div>
+        </div>
+        <div class="col col-md-6">
+          <div class="myRightCtn-company">
+            <div class="box-company">
+              <header>Hello Companies...</header>
+
+              <p>
+                You can create your Company Account for your passport
+                services by which users can apply through your company.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,19 @@
+.form-row-refer {
+    padding-top: 6%;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+
+  }
+  
+  .registerbutton {
+    padding-top: 6%;
+  }
+
+  .image
+  {
+    background-size: 100%;
+    background-image: url('../../assets/hero3.jpg');
+    padding: 200px;
+  }
+  

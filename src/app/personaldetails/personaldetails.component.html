@@ -1,0 +1,70 @@
+<!-- <div class="page-wrapper bg-transparent p-t-100 p-b-100 font-robo">
+    <div class="wrapper wrapper--w680"> -->
+        <div class="card card-1">
+            <div class="card-heading"></div>
+            <div class="card-body">
+                <h2 class="title" style="text-align: center;">Registration Info</h2>
+                <form [formGroup]="personalform">
+
+                    <div class="form-group">
+                        <label for="first name">First Name</label>
+                        <input type="text" class="form-control" id="first name"
+                        formControlName = "firstName"
+                          aria-describedby="emailHelp" placeholder="Enter First Name">
+                        <small *ngIf="!personalform.controls.firstName.valid && personalform.controls.firstName.touched" id="eventname" class="text-danger">First Name is required</small>
+                      </div>
+
+                      
+                    <div class="form-group">
+                        <label for="last name">Last Name</label>
+                        <input type="text" class="form-control" id="last name"
+                        formControlName="lastName"
+                          aria-describedby="emailHelp" placeholder="Enter Last Name">
+                          <small *ngIf="!personalform.controls.lastName.valid && personalform.controls.lastName.touched" id="eventname" class="text-danger">Last Name is required</small>
+                        <!-- <small id="lastname" class="form-text text-muted">Enter Last Name</small> -->
+                      </div>
+                        <div class="form-group">
+                            <label for="state">Gender</label>
+                            <select name="gender" id="gender" 
+                              class="form-control" formControlName = "gender">
+                              <option value="male">Male</option>
+                              <option value="female">Female</option>
+                            </select>
+                            <small *ngIf="!personalform.controls.gender.valid && personalform.controls.gender.touched" id="eventname" class="text-danger">Gender is required</small>
+                            <!-- <small id="state" class="form-text text-muted">Please Select Gender</small> -->
+                          </div>
+
+                          <div class="form-group">
+                            <label for="Date">Date</label>
+                            <input type="date" formControlName="dateOfBirth" class="form-control" >
+                            <small *ngIf="!personalform.controls.dateOfBirth.valid && personalform.controls.dateOfBirth.touched" id="eventname" class="text-danger">Date Of Birth is required</small>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="mobileno">Mobile No</label>
+                            <input type="number" class="form-control" formControlName="mobileNo" id="mobile number"
+                              aria-describedby="emailHelp" placeholder="Enter Mobile Number">
+                              <small *ngIf="!personalform.controls.mobileNo.valid && personalform.controls.mobileNo.touched" id="eventname" class="text-danger">Mobile Number is required</small>
+                            <!-- <small id="lastname" class="form-text text-muted">Enter Last Name</small> -->
+                          </div>
+    
+                
+                    <!-- <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-1" type="tel" placeholder="MOBILE NO." name="mobileNo">
+                            </div>
+                        </div>
+                    </div> -->
+                    <Button
+          color="primary"
+          variant="contained"
+          (click)="submitDetail()"
+     
+        >Continue</Button>
+                </form>
+            </div>
+        </div>
+    <!-- </div>
+</div> -->
+<!-- </div> -->
