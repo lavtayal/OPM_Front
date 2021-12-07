@@ -9,7 +9,7 @@ git branch: 'master', url: 'https://github.com/lavtayal/OPM_Front.git'
 }
 stage('Install'){
 steps{
-bat 'npm install'
+bat 'npm install -g @angular/cli'
 }
 }
 stage('Build'){
