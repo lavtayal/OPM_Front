@@ -3,7 +3,7 @@ agent any
 stages {
 stage('Checkout'){
 steps{
-git branch: 'main', url: 'https://github.com/ghorpadepriyanka11/EbugFront.git'
+git branch: 'main', url: 'https://github.com/lavtayal/OPM_Front.git'
 }
 }
 stage('Install'){
