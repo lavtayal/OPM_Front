@@ -23,7 +23,7 @@ bat 'npm run-script build'
 stage('Deploy')
 {
 steps{
-bat 'ng serve -o'
+bat 'ng serve'
 }
 }
 }
